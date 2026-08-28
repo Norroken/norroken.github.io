@@ -334,16 +334,16 @@
 
       <div class="dossier">
         <div class="card">
-          <div class="img-slot"><span>IMAGE — MERIDIAN NINTH</span></div>
+          <div class="img-slot"><span><img src="images/cressedia alt"Cressidium"> </span></div>
           <span class="sub">LOCATION</span>
-          <h3>Meridian Ninth</h3>
-          <p>Mining relay station, three docking spurs, one failing reactor core. Half the crew already shipped out on the last supply hauler. What's left: a skeleton maintenance staff, a nervous station chief, and a cryo-vault nobody's supposed to know about.</p>
+          <h3>CRESSIDIUM</h3>
+          <p>Cradle class planet along Cascade Line. Highly compatible with human habitation, diverse biosphere and local variety flora/fauna. Colonized 500 years prior, since grown to form a large numberof nation states/power blocs. Most notably he Leandric States Alliance (LSA), the Vestan Sovreignty, and the Republic of Okasnia. Currently the LSA and Sovreignty are engaged in a decade long cold war over "Barren Years" a stretch of land with rich resources. </p>
         </div>
         <div class="card">
-          <div class="img-slot"><span>IMAGE — STATIC CHOIR</span></div>
-          <span class="sub">OPPOSITION</span>
-          <h3>The Static Choir</h3>
-          <p>Six operators and one heavy loader-frame retrofitted for boarding actions. Marr doesn't want a fight — she wants 602 and a clean exit. Corner her crew and they'll bargain before they burn.</p>
+          <div class="img-slot"><span><img src="images/RioGrande.jpg alt"Rio Grande"></span></div>
+          <span class="sub">LOCATION</span>
+          <h3>UNS-CV RIO GRANDE</h3>
+          <p>an Ebero-class light carrier with modest history in late Second Expansion period. Second-line naval escort, reorganized as a fast mid sized carrier e.g.Amazon class. Designed for deployment of wing fighters, bombers and most importantly mounted chassis, well suited as a force multiplied against pirates and subline-equivalent Diaspora ships. Crew rotates on an uptime, downtime stasis ship, primarily operated by the NHP RIO.</p>
         </div>
       </div>
     </div>
