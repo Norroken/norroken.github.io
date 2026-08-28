@@ -423,7 +423,7 @@
           <p>XO aboard the Rio grande, recently promoted, eager to prove himself, by the book and a bit of a hardass.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="images/RIO" alt="CAPTAIN BRIGID FARRIS.png"></span></div>
+          <div class="img-slot"><span><img src="images/RIO.png" alt="CAPTAIN BRIGID FARRIS.png"></span></div>
           <div class="name">RIO</div>
           <p>she/her </p>
           <span class="role">SHIPBOARD NHP</span>
@@ -437,7 +437,7 @@
           <p>Marine lifer, tough, stubborn, fearless and proud. Longtime rival to the LANCERs, but loyal to a fault.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="images/Union Ambassador Nilan Bannerjee.png" alt="Nilan Bannerjee"></span></div>
+          <div class="img-slot"><span><img src="images/Union Ambassador Nilan BannerJee.png" alt="Nilan Bannerjee"></span></div>
           <div class="name">NILAN BANNERJEE</div>
           <p>they/them </p>
           <span class="role">UNION AMBASSADOR</span>
