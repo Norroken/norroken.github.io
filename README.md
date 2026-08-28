@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -409,35 +409,35 @@
 
       <div class="npc-grid">
         <div class="npc">
-          <div class="img-slot"><span><img src="~/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="img-slot"><span><img src="/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
           <div class="name">BRIGID FARRIS</div>
           <p>she/her </p>
           <span class="role">SHIP CAPTAIN</span>
           <p>Career naval officer and Captain of the Rio Grande. 20 years subjective service, 10 as captain. Has seen combat many times, level headed and well respected.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="~/images/1ST LIEUTENANT ALEX KIM" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="img-slot"><span><img src="/images/1ST LIEUTENANT ALEX KIM" alt="CAPTAIN BRIGID FARRIS"></span></div>
           <div class="name">ALEX KIM</div>
           <p>he/him </p>
           <span class="role">1st LIEUTENANT </span>
           <p>XO aboard the Rio grande, recently promoted, eager to prove himself, by the book and a bit of a hardass.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="~/images/RIO" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="img-slot"><span><img src="/images/RIO" alt="CAPTAIN BRIGID FARRIS"></span></div>
           <div class="name">RIO</div>
           <p>she/her </p>
           <span class="role">SHIPBOARD NHP</span>
           <p>THALASSA-class naval NHP. Bright and cheerful, while she is technically always on duty. She is gregarious, although she avoids competition as she always wins.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="img-slot"><span><img src="/images/Staff Seregeant Omari Garcia" alt="Omari Garcia"></span></div>
           <div class="name">OMARI GARCIA</div>
           <p>he/him </p>
           <span class="role">STAFF SERGEANT</span>
           <p>Marine lifer, tough, stubborn, fearless and proud. Longtime rival to the LANCERs, but loyal to a fault.</p>
         </div>
         <div class="npc">
-          <div class="img-slot"><span><img src="/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="img-slot"><span><img src="/images/Union Ambassador Nilan Bannerjee" alt="Nilan Bannerjee"></span></div>
           <div class="name">NILAN BANNERJEE</div>
           <p>they/them </p>
           <span class="role">UNION AMBASSADOR</span>
