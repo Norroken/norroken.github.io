@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation Solstice Rain — Lancer Mission Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Condensed:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0a0d12;
+    --panel:#121820;
+    --panel-2:#0e1319;
+    --line:#22303c;
+    --ice:#e9eef2;
+    --slate:#7c8996;
+    --cyan:#5fd8cf;
+    --amber:#e3a247;
+    --rust:#bb5030;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--void);
+    color:var(--ice);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  h1,h2,h3{
+    font-family:'Big Shoulders Condensed', sans-serif;
+    text-transform:uppercase;
+    margin:0;
+    letter-spacing:0.02em;
+  }
+
+  .wrap{ max-width:920px; margin:0 auto; padding:0 28px; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse 900px 500px at 80% -10%, rgba(95,216,207,0.10), transparent 60%),
+      radial-gradient(ellipse 700px 400px at 10% 110%, rgba(227,162,71,0.08), transparent 60%),
+      var(--void);
+    border-bottom:1px solid var(--line);
+    padding:56px 0 40px;
+  }
+
+  .stamp{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:var(--cyan);
+    border:1px solid rgba(95,216,207,0.35);
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:2px;
+    margin-bottom:22px;
+  }
+
+  .hero h1{
+    font-size:clamp(56px, 11vw, 108px);
+    font-weight:900;
+    line-height:0.88;
+    color:var(--ice);
+    background:linear-gradient(180deg, #f4f8fa 0%, #cddadd 55%, var(--cyan) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+  .hero .tagline{
+    margin-top:14px;
+    font-size:19px;
+    max-width:56ch;
+    color:#c7d1d8;
+    font-weight:400;
+  }
+
+  .meta{
+    margin-top:34px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(140px,1fr));
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  .meta div{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:12px 14px;
+  }
+  .meta .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    color:var(--slate);
+    display:block;
+    margin-bottom:4px;
+  }
+  .meta .v{ font-size:14.5px; color:var(--ice); font-weight:500; }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding:52px 0; border-bottom:1px solid var(--line); }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.16em;
+    color:var(--amber);
+    margin-bottom:10px;
+  }
+
+  .sec-title{ font-size:34px; font-weight:700; margin-bottom:18px; color:var(--ice); }
+
+  .lede{ font-size:16.5px; color:#d3dade; max-width:70ch; }
+  .lede + .lede{ margin-top:14px; }
+
+  /* ---------- DOSSIER GRID ---------- */
+  .dossier{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:8px;
+  }
+  .card{ background:var(--panel); padding:24px; }
+  .img-slot{
+    aspect-ratio:16/10;
+    border:1px dashed var(--line);
+    background:
+      repeating-linear-gradient(135deg, rgba(124,137,150,0.06) 0 2px, transparent 2px 14px),
+      var(--void);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+    border-radius:2px;
+  }
+  .img-slot span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    color:var(--slate);
+  }
+  .card h3{
+    font-size:22px;
+    color:var(--ice);
+    margin-bottom:4px;
+  }
+  .card .sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    color:var(--slate);
+    margin-bottom:12px;
+    display:block;
+  }
+  .card p{ font-size:14.5px; color:#c3ccd2; margin:0; }
+
+  @media (max-width:680px){ .dossier{ grid-template-columns:1fr; } }
+
+  /* ---------- RAIN GAUGE (signature) ---------- */
+  .gauge-section{ background:var(--panel-2); }
+  .gauge-intro{ font-size:14.5px; color:var(--slate); max-width:60ch; margin-bottom:32px; }
+
+  .gauge{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    position:relative;
+  }
+  .gauge::before{
+    content:"";
+    position:absolute;
+    top:11px;
+    left:0; right:0;
+    height:2px;
+    background:linear-gradient(90deg, var(--cyan), var(--amber) 65%, var(--rust));
+    z-index:0;
+  }
+  .phase{ position:relative; padding-right:18px; }
+  .phase:last-child{ padding-right:0; }
+  .dot{
+    width:24px; height:24px; border-radius:50%;
+    background:var(--void);
+    border:2px solid var(--cyan);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--cyan);
+    margin-bottom:16px;
+    position:relative; z-index:1;
+  }
+  .phase:nth-child(2) .dot{ border-color:#9fd894; color:#9fd894; }
+  .phase:nth-child(3) .dot{ border-color:var(--amber); color:var(--amber); }
+  .phase:nth-child(4) .dot{ border-color:var(--rust); color:var(--rust); }
+
+  .phase .t{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    color:var(--slate);
+    margin-bottom:6px;
+  }
+  .phase h4{
+    font-family:'Big Shoulders Condensed', sans-serif;
+    text-transform:uppercase;
+    font-size:22px;
+    font-weight:700;
+    margin:0 0 8px;
+    color:var(--ice);
+  }
+  .phase p{ font-size:13.5px; color:#b7c0c6; margin:0; padding-right:6px; }
+
+  @media (max-width:680px){
+    .gauge{ grid-template-columns:1fr; gap:28px; }
+    .gauge::before{ display:none; }
+    .phase{ padding-right:0; padding-left:34px; border-left:2px solid var(--line); }
+    .dot{ position:absolute; left:-13px; top:-1px; }
+  }
+
+  /* ---------- OBJECTIVES ---------- */
+  .obj-primary{
+    border:1px solid var(--cyan);
+    background:rgba(95,216,207,0.06);
+    padding:20px 22px;
+    margin-bottom:22px;
+    border-radius:2px;
+  }
+  .obj-primary .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    color:var(--cyan);
+    display:block;
+    margin-bottom:8px;
+  }
+  .obj-primary p{ font-size:16px; margin:0; color:var(--ice); }
+
+  .obj-secondary{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+  .obj-secondary li{
+    font-size:14.5px;
+    color:#c3ccd2;
+    padding-left:22px;
+    position:relative;
+  }
+  .obj-secondary li::before{
+    content:"";
+    position:absolute; left:0; top:7px;
+    width:9px; height:9px;
+    border:1.5px solid var(--amber);
+    transform:rotate(45deg);
+  }
+
+  /* ---------- NPCS ---------- */
+  .npc-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .npc{ background:var(--panel); padding:20px 22px; }
+  .npc .img-slot{ aspect-ratio:1/1; margin-bottom:14px; }
+  .npc .name{ font-size:17px; font-weight:600; color:var(--ice); }
+  .npc .role{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    color:var(--amber);
+    display:block;
+    margin:2px 0 8px;
+  }
+  .npc p{ font-size:13.5px; color:#b7c0c6; margin:0; }
+
+  @media (max-width:680px){ .npc-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--panel-2);
+    padding:44px 0 56px;
+    border-bottom:none;
+  }
+  footer .eyebrow{ color:var(--slate); }
+  footer p{ font-size:14px; color:#9aa5ac; max-width:65ch; }
+  footer .sign{
+    margin-top:26px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--slate);
+    letter-spacing:0.08em;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <span class="stamp">UNION SIGNAL CORPS · FLASH TRAFFIC · EYES: PILOT CANDIDATES</span>
+      <h1>Operation<br>Solstice<br>Rain</h1>
+      <p class="tagline">A three-hour window. A dying mind. A sky about to turn to knives.</p>
+
+      <div class="meta">
+        <div><span class="k">SITE</span><span class="v">Cressidium</span></div>
+        <div><span class="k">CLEARANCE</span><span class="v">Union Provisional</span></div>
+        <div><span class="k">LICENSE</span><span class="v">LL 0–2</span></div>
+        <div><span class="k">RUNTIME</span><span class="v">2 Missions</span></div>
+        <div><span class="k">PARTY</span><span class="v">4-5 Pilots</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">BRIEFING</div>
+      <h2 class="sec-title">The rain only falls once</h2>
+
+      <p class="lede">Once every eleven years, Tallow's Eye swings its ring system through direct solar line, and the gas giant's ionized dust sleets down across everything in low orbit. Union calls it the Solstice Rain. On Meridian Ninth, a beat-up relay station bolted to a mining scaffold, the rain has one more meaning: it's the only weather cold enough to kill 602.</p>
+
+      <p class="lede">602 is a fragment — a splinter of a pre-Fall NHP that station crews found frozen in a derelict fifteen years ago and never reported. It's been sleeping in a cryo-locker below the ring ever since, twitching awake for minutes at a time whenever the reactor spikes. The ionization storm will scramble whatever's left of it beyond recovery — unless someone gets there first.</p>
+
+      <p class="lede">The Static Choir, a HORUS-adjacent salvage crew led by the mercenary Vantile Marr, wants to pull 602 out before the rain hits and sell what's left of its mind to whoever's still buying old-world ghosts. Union wants it contained, studied, or — if the pilots decide otherwise — freed. Either way, somebody's landing on Meridian Ninth in the next four hours, and the sky is already starting to hum.</p>
+
+      <div class="dossier">
+        <div class="card">
+          <div class="img-slot"><span>IMAGE — MERIDIAN NINTH</span></div>
+          <span class="sub">LOCATION</span>
+          <h3>Meridian Ninth</h3>
+          <p>Mining relay station, three docking spurs, one failing reactor core. Half the crew already shipped out on the last supply hauler. What's left: a skeleton maintenance staff, a nervous station chief, and a cryo-vault nobody's supposed to know about.</p>
+        </div>
+        <div class="card">
+          <div class="img-slot"><span>IMAGE — STATIC CHOIR</span></div>
+          <span class="sub">OPPOSITION</span>
+          <h3>The Static Choir</h3>
+          <p>Six operators and one heavy loader-frame retrofitted for boarding actions. Marr doesn't want a fight — she wants 602 and a clean exit. Corner her crew and they'll bargain before they burn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gauge-section">
+    <div class="wrap">
+      <div class="eyebrow">THE CLOCK</div>
+      <h2 class="sec-title">Rain Gauge</h2>
+      <p class="gauge-intro">Track the storm openly at the table. It's the real antagonist — every scene, ask what phase you're in before you ask what happens next.</p>
+
+      <div class="gauge">
+        <div class="phase">
+          <div class="dot mono">01</div>
+          <div class="t">T MINUS 4 HRS</div>
+          <h4>Clear Sky</h4>
+          <p>Normal ops. Comms clean, shields nominal, 602 dormant.</p>
+        </div>
+        <div class="phase">
+          <div class="dot mono">02</div>
+          <div class="t">T MINUS 2 HRS</div>
+          <h4>First Drops</h4>
+          <p>Static building. Sensors flicker; NHP systems, 602 included, grow restless.</p>
+        </div>
+        <div class="phase">
+          <div class="dot mono">03</div>
+          <div class="t">T MINUS 45 MIN</div>
+          <h4>Downpour</h4>
+          <p>Station comms drop entirely. Shields degrade each round spent outside cover.</p>
+        </div>
+        <div class="phase">
+          <div class="dot mono">04</div>
+          <div class="t">RAIN HITS</div>
+          <h4>Whiteout</h4>
+          <p>Full ionization. Exposed mechs take recurring energy damage. 602's window closes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">OBJECTIVES</div>
+      <h2 class="sec-title">What the pilots are here for</h2>
+
+      <div class="obj-primary">
+        <span class="k">PRIMARY</span>
+        <p>Reach the cryo-vault and decide 602's fate before Whiteout.</p>
+      </div>
+
+      <ul class="obj-secondary">
+        <li>Keep Meridian Ninth's remaining crew alive.</li>
+        <li>Deny the Static Choir a clean extraction.</li>
+        <li>Get your own mechs off the station before the ring goes opaque.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="eyebrow">DOSSIER</div>
+      <h2 class="sec-title">The UNS-CV RIO GRANDE Crew</h2>
+
+      <div class="npc-grid">
+        <div class="npc">
+          <div class="img-slot"><span><img src="~/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="name">BRIGID FARRIS</div>
+          <p>she/her </p>
+          <span class="role">SHIP CAPTAIN</span>
+          <p>Career naval officer and Captain of the Rio Grande. 20 years subjective service, 10 as captain. Has seen combat many times, level headed and well respected.</p>
+        </div>
+        <div class="npc">
+          <div class="img-slot"><span><img src="~/images/1ST LIEUTENANT ALEX KIM" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="name">ALEX KIM</div>
+          <p>he/him </p>
+          <span class="role">1st LIEUTENANT </span>
+          <p>XO aboard the Rio grande, recently promoted, eager to prove himself, by the book and a bit of a hardass.</p>
+        </div>
+        <div class="npc">
+          <div class="img-slot"><span><img src="~/images/RIO" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="name">RIO</div>
+          <p>she/her </p>
+          <span class="role">SHIPBOARD NHP</span>
+          <p>THALASSA-class naval NHP. Bright and cheerful, while she is technically always on duty. She is gregarious, although she avoids competition as she always wins.</p>
+        </div>
+        <div class="npc">
+          <div class="img-slot"><span><img src="/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="name">OMARI GARCIA</div>
+          <p>he/him </p>
+          <span class="role">STAFF SERGEANT</span>
+          <p>Marine lifer, tough, stubborn, fearless and proud. Longtime rival to the LANCERs, but loyal to a fault.</p>
+        </div>
+        <div class="npc">
+          <div class="img-slot"><span><img src="/images/CAPTAIN BRIGID FARRIS" alt="CAPTAIN BRIGID FARRIS"></span></div>
+          <div class="name">NILAN BANNERJEE</div>
+          <p>they/them </p>
+          <span class="role">UNION AMBASSADOR</span>
+          <p>Ambassador to the Human Diaspora under perview of the UAD. Has seen dozens of worlds and sectors. Charming and pleasant, posised and calm. The consemate ambassador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
